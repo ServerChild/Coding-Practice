@@ -1,9 +1,12 @@
+//Q. 불기 연도가 주어질 때, 서기 연도로 바꿔 주는 프로그램
 package main.java.Baekjoon;
 
 import java.util.Scanner;
 
 public class Q18108 {
     public static void main(String[] args) {
+        //scanner 객체 생성
+        //System.in: 사용자로부터 키 입력 받음
         Scanner sc = new Scanner(System.in);
 
         //불기 연도를 입력 받는다
