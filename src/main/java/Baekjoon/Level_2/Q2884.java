@@ -6,25 +6,25 @@ import java.util.Scanner;
 
 public class Q2884 {
     public static void main(String[] args) {
-        //두 정수 H(시), M(분)에 대한 객체 생성
         Scanner sc = new Scanner(System.in);
 
-        int hour = sc.nextInt(); //시
-        int minute = sc.nextInt();  //분
+        // 시(H), 분(M) 객체 선언
+        int H = sc.nextInt();
+        int M = sc.nextInt();
 
-        //"M < 45"인 경우 = "H - 1" & "M + 15"
-        if(minute < 45) {
-                hour--;
-                minute += 15;
+        // 분(M)이 45보다 작을 경우 -> 시(H) -1, 분(M) + 15
+        if(M < 45) {
+            H--;
+            M += 15;
 
-            //"H < 0"인 경우 = "H = 23"
-            if (hour < 0) hour = 23;
+            // 시(H)가 0보다 작을 경우 -> 시(H) = 23
+            if (H < 0) H = 23;
 
-            //"H M"으로 출력
-            System.out.println(hour + " " + minute);
+            System.out.println(H + " " + M);
         }
-
-        //"M > 45"인 경우 = "M - 45"
-        else System.out.println(hour + " " + (minute - 45));
+        // 분(M)이 45보다 클 경우 -> 시(H)는 그대로, 분(M) - 45
+        else {
+            System.out.println(H + " " + (M - 45));
+        }
     }
 }
